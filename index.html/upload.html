@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Market - Swappable</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: rgb(61, 62, 61);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin: 10px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4a4a4a;
+            color: white;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 10px auto;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        footer {
+            padding: 1em;
+            text-align: center;
+            background-color: rgb(83, 82, 82);
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            background-color: rgb(83, 82, 82);
+        }
+        header img {
+            height: 50px; /* Adjust height as needed */
+        }
+        header h1 {
+            margin: 0;
+            color: white;
+            text-align: center;
+            flex-grow: 1;
+        }
+        .logout-link {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.leonardo.ai/users/aef09c40-dad9-49e4-afcb-6a7a4b6df3df/generations/3361f816-7405-4e98-8bc7-37ea81fa09d8/Leonardo_Phoenix_Create_a_modern_symmetrical_logo_featuring_tw_1.jpg" alt="Swappable Logo" class="logo">
+        <h1>Swap Market</h1>
+        <a href="logout.html" class="logout-link">Logout</a>
+    </header>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+        <h2>Upload to Swap</h2>
+        <div class="form-group">
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" required>
+        </div>
+        <div class="form-group">
+            <label for="itemModel">Model:</label>
+            <input type="text" id="itemModel" required>
+        </div>
+        <div class="form-group">
+            <label for="yearOfManufacture">Year of Manufacture:</label>
+            <input type="number" id="yearOfManufacture" min="1900" max="2024" required>
+        </div>
+        <div class="form-group">
+            <label for="condition">Condition:</label>
+            <select id="condition" required>
+                <option value="">Select Condition</option>
+                <option value="brandNew">Brand New</option>
+                <option value="preloved">Preloved</option>
+            </select>
+        </div>
+
+        <!-- Category Selection Section -->
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option value="electronics">Electronics</option>
+                <option value="furniture">Furniture</option>
+                <option value="clothing">Clothing</option>
+                <option value="books">Books</option>
+                <option value="toys">Toys</option>
+                <option value="property">Property</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="value">Estimated Value:</label>
+            <input type="number" id="value" required>
+        </div>
+        <div class="form-group">
+            <label for="currency">Currency:</label>
+            <select id="currency" required>
+                <option value="">Select Currency</option>
+                <option value="USD">US Dollar (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="GBP">British Pound (GBP)</option>
+                <option value="JPY">Japanese Yen (JPY)</option>
+                <option value="AUD">Australian Dollar (AUD)</option>
+                <option value="CAD">Canadian Dollar (CAD)</option>
+                <option value="CHF">Swiss Franc (CHF)</option>
+                <option value="CNY">Chinese Yuan (CNY)</option>
+                <option value="SEK">Swedish Krona (SEK)</option>
+                <option value="NZD">New Zealand Dollar (NZD)</option>
+                <option value="MXN">Mexican Peso (MXN)</option>
+                <option value="SGD">Singapore Dollar (SGD)</option>
+                <option value="HKD">Hong Kong Dollar (HKD)</option>
+                <option value="NOK">Norwegian Krone (NOK)</option>
+                <option value="RUB">Russian Ruble (RUB)</option>
+                <option value="INR">Indian Rupee (INR)</option>
+                <option value="BRL">Brazilian Real (BRL)</option>
+                <option value="ZAR">South African Rand (ZAR)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" rows="5" required></textarea>
+        </div>
+        
+        <!-- Image Upload Section -->
+        <div class="form-group">
+            <label for="images">Upload Images (Max 5):</label>
+            <input type="file" id="images" name="images[]" accept="image/*" multiple required>
+            <small>Note: You can upload up to 5 images</small>
+        </div>
+
+        <button type="submit">Upload Item</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Swappable. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Optional: Enforce 5 file upload limit on client side
+        document.getElementById('images').addEventListener('change', function() {
+            if (this.files.length > 5) {
+                alert('You can only upload a maximum of 5 images');
+                this.value = ''; // Reset the input if more than 5 files are selected
+            }
+        });
+    </script>
+</body>
+</html>

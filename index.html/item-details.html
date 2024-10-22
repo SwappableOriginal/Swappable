@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details - Swappable</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: rgb(61, 62, 61);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            background-color: rgb(83, 82, 82);
+        }
+        header img {
+            height: 50px; /* Adjust height as needed */
+        }
+        header h1 {
+            margin: 0;
+            color: white;
+            flex-grow: 1;
+            text-align: center;
+        }
+        .logout-link {
+            color: white;
+            text-decoration: none;
+        }
+        .item-details {
+            margin: 20px auto;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .item-images {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .item-images img {
+            max-width: 300px;
+            border-radius: 5px;
+        }
+        .item-description {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.leonardo.ai/users/aef09c40-dad9-49e4-afcb-6a7a4b6df3df/generations/3361f816-7405-4e98-8bc7-37ea81fa09d8/Leonardo_Phoenix_Create_a_modern_symmetrical_logo_featuring_tw_1.jpg" alt="Swappable Logo" class="logo">
+        <h1>Item Details</h1>
+        <a href="logout.html" class="logout-link">Logout</a>
+    </header>
+    
+    <div class="item-details">
+        <div class="item-images">
+            <img src="item1-image1.jpg" alt="Item 1 Image 1">
+            <img src="item1-image2.jpg" alt="Item 1 Image 2">
+            <img src="item1-image3.jpg" alt="Item 1 Image 3">
+        </div>
+        <div class="item-description">
+            <h2>Item Name</h2>
+            <p><strong>Description:</strong> Detailed description of the item.</p>
+            <p><strong>Condition:</strong> Preloved</p>
+            <p><strong>Estimated Value:</strong> $200</p>
+            <p><strong>Year of Manufacture:</strong> 2019</p>
+            <p><strong>Model:</strong> XYZ Model</p>
+            <p><strong>Currency:</strong> USD</p>
+        </div>
+        <button onclick="window.location.href='chat.html'">Start Swop Negotiation</button>
+    </div>
+</body>
+</html>

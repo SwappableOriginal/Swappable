@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Swappable</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: rgb(61, 62, 61);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            padding: 1em;
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        img.logo {
+            height: 100px;
+        }
+        h1 {
+            margin: 0;
+            color: purple;
+        }
+        main {
+            padding: 2em;
+            width: 100%;
+            max-width: 600px; /* Limit width for sign-in form */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        section {
+            margin-bottom: 2em;
+            text-align: left;
+            width: 100%;
+        }
+        label {
+            display: block;
+            margin: 0.5em 0;
+        }
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 20px); /* Full width with padding */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+        button {
+            background-color: white;
+            color: purple;
+            cursor: pointer;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: lightgray;
+        }
+        .remember-me {
+            display: flex;
+            align-items: center; /* Center the checkbox vertically */
+        }
+        footer {
+            margin-top: auto;
+            padding: 1em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="https://cdn.leonardo.ai/users/aef09c40-dad9-49e4-afcb-6a7a4b6df3df/generations/3361f816-7405-4e98-8bc7-37ea81fa09d8/Leonardo_Phoenix_Create_a_modern_symmetrical_logo_featuring_tw_1.jpg" alt="Swappable Logo" class="logo">
+        </a>
+        <h1>Swappable</h1>
+        <a href="contact.html">
+            <button>Contact Us</button>
+        </a>
+    </header>
+    <main>
+        <section>
+            <h2>Sign In</h2>
+            <form onsubmit="alert('Sign in successful!'); return false;">
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="Enter your email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Remember Me</label>
+                </div>
+
+                <button type="submit">Sign In</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Swappable. All rights reserved.</p>
+    </footer>
+</body>
+</html>

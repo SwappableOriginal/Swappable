@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Negotiation - Swappable</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: rgb(61, 62, 61);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            background-color: rgb(83, 82, 82);
+        }
+        header img {
+            height: 50px; /* Adjust height as needed */
+        }
+        header h1 {
+            margin: 0;
+            color: white;
+            flex-grow: 1;
+            text-align: center;
+        }
+        .logout-link {
+            color: white;
+            text-decoration: none;
+        }
+        h1 {
+            margin: 0;
+        }
+        .chat-container {
+            display: flex;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .item-info {
+            flex: 1;
+            padding: 20px;
+        }
+        .item-images img {
+            max-width: 100px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        .chat-box {
+            flex: 2;
+            padding: 20px;
+            background-color: rgb(83, 82, 82);
+            border-radius: 5px;
+            margin-right: 20px; /* Add margin to separate sections */
+        }
+        .chat-box textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            background-color: #4a4a4a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px; /* Space above button */
+        }
+        .proposal-section {
+            margin-top: 20px; /* Space above proposal section */
+            padding: 20px;
+            background-color: rgb(83, 82, 82);
+            border-radius: 5px;
+        }
+        .proposal-section input[type="file"] {
+            margin-bottom: 10px;
+        }
+        .proposal-section h3 {
+            margin-top: 0; /* Remove margin from top of h3 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.leonardo.ai/users/aef09c40-dad9-49e4-afcb-6a7a4b6df3df/generations/3361f816-7405-4e98-8bc7-37ea81fa09d8/Leonardo_Phoenix_Create_a_modern_symmetrical_logo_featuring_tw_1.jpg" alt="Swappable Logo" class="logo">
+        <h1>Swap Negotiation</h1>
+        <a href="logout.html" class="logout-link">Logout</a>
+    </header>
+
+    <div class="chat-container">
+        <!-- Item Info Section -->
+        <div class="item-info">
+            <h2>Item Name</h2>
+            <div class="item-images">
+                <img src="item1-image1.jpg" alt="Item 1 Image 1">
+                <img src="item1-image2.jpg" alt="Item 1 Image 2">
+                <img src="item1-image3.jpg" alt="Item 1 Image 3">
+                <!-- Add more images if available -->
+            </div>
+            <p><strong>Description:</strong> Detailed description of the item.</p>
+            <p><strong>Condition:</strong> Preloved</p>
+            <p><strong>Estimated Value:</strong> $200</p>
+            <p><strong>Year of Manufacture:</strong> 2019</p>
+            <p><strong>Model:</strong> XYZ Model</p>
+            <p><strong>Currency:</strong> USD</p>
+        </div>
+
+        <!-- Chat Box Section -->
+        <div class="chat-box">
+            <h3>Negotiation Chat</h3>
+            <textarea placeholder="Type your message here..."></textarea>
+            <button>Send Message</button>
+        </div>
+    </div>
+
+    <!-- Swap Proposal Section -->
+    <div class="proposal-section">
+        <h3>Swap Proposal</h3>
+        <label for="proposalImage">Upload Image for Proposal:</label>
+        <input type="file" id="proposalImage" accept="image/*">
+        <button onclick="uploadProposalImage()">Send Proposal Image</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Swappable. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function uploadProposalImage() {
+            const fileInput = document.getElementById('proposalImage');
+
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    alert("Image uploaded successfully!"); // Confirmation for successful upload
+                    // You can add more functionality here to show the image in the chat or store it
+                };
+                
+                reader.readAsDataURL(file);
+            } else {
+                alert("Please select an image to upload.");
+            }
+        }
+    </script>
+</body>
+</html>

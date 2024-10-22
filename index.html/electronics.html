@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics - Swappable</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: rgb(61, 62, 61);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            background-color: rgb(83, 82, 82);
+        }
+        header img {
+            height: 50px; /* Adjust height as needed */
+        }
+        header h1 {
+            margin: 0;
+            color: white;
+            flex-grow: 1;
+            text-align: center;
+        }
+        .logout-link {
+            color: white;
+            text-decoration: none;
+        }
+        h1 {
+            margin: 0;
+        }
+        #item-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .item {
+            background-color: rgb(83, 82, 82);
+            margin: 10px;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            width: 150px;
+        }
+        .item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        footer {
+            padding: 1em;
+            text-align: center;
+            background-color: rgb(83, 82, 82);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.leonardo.ai/users/aef09c40-dad9-49e4-afcb-6a7a4b6df3df/generations/3361f816-7405-4e98-8bc7-37ea81fa09d8/Leonardo_Phoenix_Create_a_modern_symmetrical_logo_featuring_tw_1.jpg" alt="Swappable Logo" class="logo">
+        <h1>Electronics</h1>
+        <a href="dashboard.html" class="logout-link">Back to Dashboard</a>
+    </header>
+    <main>
+        <h2>Available Electronics</h2>
+        <div id="item-list">
+            <div class="item">
+                <img src="https://via.placeholder.com/150x100?text=Electronics+1" alt="Item 1">
+                <p>Smartphone</p>
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/150x100?text=Electronics+2" alt="Item 2">
+                <p>Laptop</p>
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/150x100?text=Electronics+3" alt="Item 3">
+                <p>Smartwatch</p>
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/150x100?text=Electronics+4" alt="Item 4">
+                <p>Headphones</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Swappable. All rights reserved.</p>
+    </footer>
+</body>
+</html>

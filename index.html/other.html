@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other - Swappable</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: rgb(61, 62, 61);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal overflow */
+        }
+        header {
+            display: flex;
+            justify-content: center; /* Centers content */
+            align-items: center;
+            padding: 1em;
+            background-color: rgb(83, 82, 82);
+        }
+        header > img {
+            height: 100px; /* Set logo size */
+            position: absolute; /* Position logo on the left */
+            left: 20px;
+        }
+        h1 {
+            margin: 0;
+            color: white;
+            text-align: center;
+            flex-grow: 1; /* Makes sure header title is centered */
+        }
+        .logout-link {
+            color: white;
+            margin-left: auto; /* Pushes the logout link to the right */
+            text-decoration: none;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Flexible column size */
+            gap: 20px;
+            padding: 20px;
+            max-height: 100vh; /* Limit height to viewport */
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .gallery img:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+        footer {
+            padding: 1em;
+            text-align: center;
+            background-color: rgb(83, 82, 82);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.leonardo.ai/users/aef09c40-dad9-49e4-afcb-6a7a4b6df3df/generations/3361f816-7405-4e98-8bc7-37ea81fa09d8/Leonardo_Phoenix_Create_a_modern_symmetrical_logo_featuring_tw_1.jpg" alt="Swappable Logo" class="logo">
+        <h1>Other Items</h1>
+        <a href="dashboard.html" class="logout-link">Back to Dashboard</a>
+    </header>
+    
+    <main>
+        <h2 style="text-align: center;">Available Other Items</h2>
+        <div class="gallery">
+            <!-- Unlimited scrolling gallery of images -->
+            <img src="https://via.placeholder.com/200x150?text=Item+1" alt="Item 1">
+            <img src="https://via.placeholder.com/200x150?text=Item+2" alt="Item 2">
+            <img src="https://via.placeholder.com/200x150?text=Item+3" alt="Item 3">
+            <img src="https://via.placeholder.com/200x150?text=Item+4" alt="Item 4">
+            <img src="https://via.placeholder.com/200x150?text=Item+5" alt="Item 5">
+            <img src="https://via.placeholder.com/200x150?text=Item+6" alt="Item 6">
+            <img src="https://via.placeholder.com/200x150?text=Item+7" alt="Item 7">
+            <img src="https://via.placeholder.com/200x150?text=Item+8" alt="Item 8">
+            <img src="https://via.placeholder.com/200x150?text=Item+9" alt="Item 9">
+            <img src="https://via.placeholder.com/200x150?text=Item+10" alt="Item 10">
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Swappable. All rights reserved.</p>
+    </footer>
+</body>
+</html>

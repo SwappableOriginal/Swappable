@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Swappable</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: rgb(61, 62, 61);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: center; /* Centers content */
+            align-items: center;
+            padding: 1em;
+            background-color: rgb(83, 82, 82);
+        }
+        header > img {
+            height: 100px; /* Set logo size */
+            position: absolute; /* Position logo on the left */
+            left: 20px;
+        }
+        h1 {
+            margin: 0;
+            color: white;
+            text-align: center;
+            flex-grow: 1; /* Makes sure header title is centered */
+        }
+        .logout-link {
+            color: white;
+            margin-left: auto; /* Pushes the logout link to the right */
+            text-decoration: none;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .category-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .category-button {
+            background-color: rgb(83, 82, 82);
+            color: white;
+            margin: 0 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .upload-button {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            width: fit-content;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 images per row */
+            gap: 20px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .gallery img:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+        footer {
+            padding: 1em;
+            text-align: center;
+            background-color: rgb(83, 82, 82);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.leonardo.ai/users/aef09c40-dad9-49e4-afcb-6a7a4b6df3df/generations/3361f816-7405-4e98-8bc7-37ea81fa09d8/Leonardo_Phoenix_Create_a_modern_symmetrical_logo_featuring_tw_1.jpg" alt="Swappable Logo" class="logo">
+        <h1>Dashboard</h1>
+        <a href="logout.html" class="logout-link">Logout</a>
+    </header>
+    
+    <!-- Search bar container -->
+    <div class="search-container">
+        <input type="text" class="search-bar" id="searchInput" placeholder="Search for items..." onkeyup="searchItems()">
+    </div>
+
+    <main>
+        <div class="category-buttons">
+            <a class="category-button" href="electronics.html">Electronics</a>
+            <a class="category-button" href="house-home.html">House & Home</a>
+            <a class="category-button" href="vehicles.html">Vehicles</a>
+            <a class="category-button" href="property.html">Property</a>
+            <a class="category-button" href="other.html">Other</a>
+        </div>
+        
+        <button class="upload-button" onclick="window.location.href='upload.html'">Upload to Swap</button>
+
+        <h2 style="text-align: center;">Swap Gallery</h2>
+        <div class="gallery">
+            <!-- Original Gallery images -->
+            <img src="image1.jpg" alt="Gallery Image 1" onclick="window.location.href='item-details.html'">
+            <img src="image2.jpg" alt="Gallery Image 2" onclick="window.location.href='item-details.html'">
+            <img src="image3.jpg" alt="Gallery Image 3" onclick="window.location.href='item-details.html'">
+            <img src="image4.jpg" alt="Gallery Image 4" onclick="window.location.href='item-details.html'">
+            <img src="image5.jpg" alt="Gallery Image 5" onclick="window.location.href='item-details.html'">
+            <img src="image6.jpg" alt="Gallery Image 6" onclick="window.location.href='item-details.html'">
+            <img src="image7.jpg" alt="Gallery Image 7" onclick="window.location.href='item-details.html'">
+            <img src="image8.jpg" alt="Gallery Image 8" onclick="window.location.href='item-details.html'">
+            <img src="image9.jpg" alt="Gallery Image 9" onclick="window.location.href='item-details.html'">
+            <img src="image10.jpg" alt="Gallery Image 10" onclick="window.location.href='item-details.html'">
+            <img src="image11.jpg" alt="Gallery Image 11" onclick="window.location.href='item-details.html'">
+            <img src="image12.jpg" alt="Gallery Image 12" onclick="window.location.href='item-details.html'">
+            <img src="image13.jpg" alt="Gallery Image 13" onclick="window.location.href='item-details.html'">
+            <img src="image14.jpg" alt="Gallery Image 14" onclick="window.location.href='item-details.html'">
+            <img src="image15.jpg" alt="Gallery Image 15" onclick="window.location.href='item-details.html'">
+            <img src="image16.jpg" alt="Gallery Image 16" onclick="window.location.href='item-details.html'">
+            <img src="image17.jpg" alt="Gallery Image 17" onclick="window.location.href='item-details.html'">
+            <img src="image18.jpg" alt="Gallery Image 18" onclick="window.location.href='item-details.html'">
+            <img src="image19.jpg" alt="Gallery Image 19" onclick="window.location.href='item-details.html'">
+            <img src="image20.jpg" alt="Gallery Image 20" onclick="window.location.href='item-details.html'">
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Swappable. All rights reserved.</p>
+    </footer>
+
+    <!-- Placeholder search function -->
+    <script>
+        function searchItems() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            // Logic to filter and display items based on search input
+            console.log("User searched for: " + input);
+            // Implement actual search logic here
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 Swappable. All rights reserved. | <a href="terms.html">Terms and Conditions</a></p>
+    </footer>
+    
+</body>
+</html>
